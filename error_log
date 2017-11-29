@@ -1,0 +1,3 @@
+
+[26-Dec-2016 14:19:52 UTC] PHP Fatal error:  Cannot redeclare MenuController::hiddePermissonMessages() in /home/shatoarno/public_html/application/controllers/MenuController.php on line 417
+[26-Dec-2016 14:19:53 UTC] PHP Fatal error:  Cannot redeclare MenuController::hiddePermissonMessages() in /home/shatoarno/public_html/application/controllers/MenuController.php on line 417
