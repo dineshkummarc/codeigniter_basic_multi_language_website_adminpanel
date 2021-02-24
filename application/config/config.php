@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = 'http://ems.dev/';
+$config['base_url'] = 'http://local.rocket.co.in:8081/codeigniter_basic_multi_language_website_adminpanel/';
 
 //$config['server_root'] = $_SERVER['DOCUMENT_ROOT'];
 
