@@ -16,7 +16,7 @@ class Layout {
     private $css_list = array(), $js_list = array();
     private $block_list, $block_new, $block_replace = false;
 
-    function Layout() {
+    function __construct() {
         $this->obj =& get_instance();
         $this->layout_view = "layout/default.php";
         $this->home_view = "layout/defaultHome.php";

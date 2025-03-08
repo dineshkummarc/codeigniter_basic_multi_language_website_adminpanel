@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = 'http://local.rocket.co.in:8081/codeigniter_basic_multi_language_website_adminpanel/';
+$config['base_url'] = 'http://localhost/1st/';
 
 //$config['server_root'] = $_SERVER['DOCUMENT_ROOT'];
 
@@ -370,13 +370,13 @@ $config['encryption_key'] = '1234567';
 | except for 'cookie_prefix' and 'cookie_httponly', which are ignored here.
 |
 */
-$config['sess_driver'] = 'files';
-$config['sess_cookie_name'] = 'pro_paws_session';
+$config['sess_driver'] = 'files';  // Or 'database' if using DB sessions
+$config['sess_cookie_name'] = 'ci_session';
 $config['sess_expiration'] = 7200;
-$config['sess_save_path'] = NULL;
-$config['sess_match_ip'] = FALSE;
+$config['sess_save_path'] = sys_get_temp_dir(); // Or use a valid writable directory
 $config['sess_time_to_update'] = 300;
-$config['sess_regenerate_destroy'] = FALSE;
+$config['sess_regenerate_destroy'] = FALSE;  // Prevent session loss
+//$config['cookie_domain'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -397,7 +397,7 @@ $config['cookie_prefix']	= '';
 $config['cookie_domain']	= '';
 $config['cookie_path']		= '/';
 $config['cookie_secure']	= FALSE;
-$config['cookie_httponly'] 	= FALSE;
+$config['cookie_httponly'] 	= TRUE;
 
 /*
 |--------------------------------------------------------------------------

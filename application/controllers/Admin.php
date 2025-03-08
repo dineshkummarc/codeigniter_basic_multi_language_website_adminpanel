@@ -9,7 +9,7 @@
                 $this->load->model('LoginModel');
                 $user = $this->input->post('user');
                 $pass = $this->input->post('pass');
-//                $pass=md5($this->input->post('pass'));
+//                
                 $userData=array(
                     'user' => $user,
                     'pass'=> $pass
@@ -17,7 +17,7 @@
                 $data=$this->LoginModel->Login($userData);
                 if($data){
                      $this->session->set_userdata('id',$data['id']);
-                    //$this->session->userdata('id');
+                     session_write_close();
                     redirect(base_url('admin/loginEd'));
                 }
                  
@@ -28,6 +28,7 @@
             $this->load->view('admin/index');
         }
         public function loginEd(){
+            print_r($this->session->userdata());
             if(!$this->session->userdata('id')){
                 redirect(base_url('admin'));
             }else if($this->session->userdata('id')){
